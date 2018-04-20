@@ -119,9 +119,6 @@ contract stcToken is ERC20Interface, Owned, SafeMath {
         symbol = "STC";
         name = "STC Token";
         decimals = 18;
-        //bonusEnds = now + 1 weeks;
-        //endDate = now + 7 weeks;
-
     }
 
 
@@ -129,7 +126,7 @@ contract stcToken is ERC20Interface, Owned, SafeMath {
     // Total supply
     // ------------------------------------------------------------------------
     function totalSupply() public constant returns (uint) {
-        return _totalSupply  - balances[address(0)];//Contract address?
+        return _totalSupply  - balances[address(0)];
     }
 
 
